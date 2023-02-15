@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header { 
+  height: 15vh;
+}
+
+main { 
+  min-height: 65vh;
+}
+
+footer { 
+  height: 20vh;
+}
+
+.orange-background {
+  background-color: rgb(226,70,43);
+  height: 40vh
+}
