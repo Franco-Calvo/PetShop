@@ -1,23 +1,56 @@
-@media screen and (min-width: 992px) {
-    .nav-btn {
-        width: 5.5rem;
-        min-height: fit-content;
-        height: 8vh;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 500;
-    }
+.section-1 {
+    padding: 0 0 0 2rem;
+    background-color: rgb(226, 70, 43);
+    min-height: 65vh;
+    display: flex;
 }
 
-.nav-bar {
-    background-color: rgb(226, 70, 43) !important;
-    color: white !important;
+.card-main {
+    width: 60vw;
 }
 
-.nav-container {
-    z-index: 2;
+.card-main h1 {
+    padding-top: 2rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
+
+.card-main a {
+    text-decoration: none;
+}
+.call-button{
+    color: rgb(255, 217, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.call-button p{
+    margin: 0;
+}
+.call-button svg{
+    background-color: rgb(255, 217, 49);
+    color: rgb(226, 70, 43);
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+.shop-button{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    padding: 0.7rem 2rem;
+    border-radius: 0.6rem;
+    background-color: rgb(55, 55, 55);
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+.section-1 img{
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
 }

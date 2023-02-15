@@ -4,18 +4,41 @@
   box-sizing: border-box;
 }
 
-header { 
+@media screen and (min-width: 992px) {
+  .nav-btn {
+      width: 5.5rem;
+      min-height: fit-content;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 500;
+  }
+}
+
+.navbar {
+  background-color: rgb(226, 70, 43) !important;
+  color: white !important;
+  border: black 1px solid;
   height: 15vh;
-  background-color: rgb(226,70,43);
+  border: 0;
+  padding: 0;
 }
 
-main { 
+.nav-container {
+  z-index: 2;
+  position: relative;
+  background-color: rgb(226, 70, 43);
+}
+
+
+main {
   min-height: 75vh;
-  background-color: rgb(226,70,43);
-
 }
 
-footer { 
+footer {
   height: 10vh;
   background-color: rgb(54, 54, 54);
 }
