@@ -1,0 +1,23 @@
+@media screen and (min-width: 992px) {
+    .nav-btn {
+        width: 5.5rem;
+        min-height: fit-content;
+        height: 8vh;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+}
+
+.nav-bar {
+    background-color: rgb(226, 70, 43) !important;
+    color: white !important;
+}
+
+.nav-container {
+    z-index: 2;
+}

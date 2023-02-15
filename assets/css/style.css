@@ -7,18 +7,15 @@
 header { 
   height: 15vh;
   background-color: rgb(226,70,43);
-  
 }
 
 main { 
-  min-height: 65vh;
+  min-height: 75vh;
+  background-color: rgb(226,70,43);
+
 }
 
 footer { 
-  height: 20vh;
-}
-
-.orange-background {
-  background-color: rgb(226,70,43);
-  height: 40vh
+  height: 10vh;
+  background-color: rgb(54, 54, 54);
 }
