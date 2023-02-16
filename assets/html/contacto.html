@@ -96,6 +96,7 @@
               <label for="name"><b> Nombre:</b></label>
               <label for="surname"><b> Apellido:</b></label>
               <label for="email"><b> Email:</b></label>
+              <label for="tel"><b>Telefono:</b></label>
               <label for="petName"><b> Nombre de su mascota:</b></label>
               <label for="petSelect"><b> Tipo de mascota:</b></label>
             </div>
@@ -104,6 +105,7 @@
               <input required type="text" id="name" name="name" />
               <input required type="text" id="surname" name="surname" />
               <input required type="email" name="email" id="email" />
+              <input type="text" name="tel" id="tel" />
               <input type="text" id="petName" name="petName" />
               <select name="pet" id="petSelect">
                 <option value="">-Indique tipo de mascota-</option>
@@ -117,7 +119,14 @@
             </div>
           </form>
         </div>
-        <div class="form"><input class="submitbtn" type="submit" /></div>
+        <div class="form">
+          <div class="textsubmit">
+            <label for="coment">Comentarios o sugerencias:</label>
+
+            <textarea id="coment" name="coment" rows="5" cols="33"></textarea>
+            <input class="submitbtn" type="submit" />
+          </div>
+        </div>
       </div>
     </main>
     <footer>
