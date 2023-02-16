@@ -12,3 +12,5 @@ button.addEventListener('click', function () {
 })
 
 
+let api = "https://mindhub-xj03.onrender.com/api/petshop"
+
