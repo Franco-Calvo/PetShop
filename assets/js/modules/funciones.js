@@ -7,7 +7,6 @@ export function newCard(list, element) {
   }
   element.innerHTML += fill;
 }
-
 export function fillCard (object) {
   console.log(object);
   return ` <div class="card-J">
