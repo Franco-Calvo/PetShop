@@ -68,31 +68,34 @@
     align-items: center;
 }
 
-.section-2 .cat-card{
+.section-2 .cat-card {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.section-2 .cat-card img{
+.section-2 .cat-card img {
     height: 15rem;
     object-fit: cover;
     align-self: start;
     position: relative;
-    bottom: 178px; left: 10px;
-}
-.section-2 .product{
-height: 100%;
-display: flex;
-align-items: center;
+    bottom: 178px;
+    left: 10px;
 }
 
-.section-2 .product img{
+.section-2 .product {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.section-2 .product img {
     height: 12rem;
     object-fit: cover;
     object-position: center;
     border-radius: 1rem;
     position: relative;
-    bottom: 75px; left: 0px;
+    bottom: 75px;
+    left: 0px;
     box-shadow: 0.2rem 0.1rem 0rem 0.15rem rgb(255, 217, 49);
 }
