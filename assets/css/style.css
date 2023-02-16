@@ -6,25 +6,25 @@
 
 @media screen and (min-width: 992px) {
   .nav-btn {
-      width: 5.5rem;
-      min-height: fit-content;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border: none;
+    width: 5.5rem;
+    min-height: fit-content;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: none;
   }
 }
 @media screen and (max-width: 991px) {
-  .nav-btn{
+  .nav-btn {
     background-color: white;
     border: 1px solid rgb(226, 70, 43);
     color: rgb(226, 70, 43);
   }
-  .nav-container{
+  .nav-container {
     background-color: white;
   }
 }
@@ -48,23 +48,20 @@ main {
 }
 
 /* footer */
-footer{
+footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 250px;
   border: 2px solid black;
-
 }
 
-.map-container{
+.map-container {
   border: 2px solid black;
   height: 205px;
 }
 
-
-.contact-section{
- 
+.contact-section {
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -72,43 +69,38 @@ footer{
   align-items: center;
 }
 
-
-.social-media{
+.social-media {
   display: flex;
   justify-content: space-between;
-
 
   padding: 5px;
   width: 240px;
 }
 
-footer a{
+footer a {
   text-decoration: none;
   color: white;
   background-color: black;
   padding: 5px;
 }
 
-footer a:hover{
+footer a:hover {
   text-decoration: none;
-  color: rgb(226,70,43);
+  color: rgb(226, 70, 43);
   background-color: black;
   padding: 5px;
 }
 
-
-.mark{
+.mark {
   border: 2px solid black;
   padding: 10px;
   background-color: black;
   color: white;
-
 }
 
-.mark:hover{
+.mark:hover {
   border: 2px solid black;
   padding: 10px;
   background-color: black;
-  color: rgb(226,70,43);
+  color: rgb(226, 70, 43);
 }
-
