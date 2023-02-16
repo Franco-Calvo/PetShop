@@ -47,7 +47,68 @@ main {
   min-height: 75vh;
 }
 
-footer {
-  height: 10vh;
-  background-color: rgb(255, 255, 255);
+/* footer */
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+  border: 2px solid black;
+
 }
+
+.map-container{
+  border: 2px solid black;
+  height: 205px;
+}
+
+
+.contact-section{
+ 
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.social-media{
+  display: flex;
+  justify-content: space-between;
+
+
+  padding: 5px;
+  width: 240px;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+
+footer a:hover{
+  text-decoration: none;
+  color: rgb(226,70,43);
+  background-color: black;
+  padding: 5px;
+}
+
+
+.mark{
+  border: 2px solid black;
+  padding: 10px;
+  background-color: black;
+  color: white;
+
+}
+
+.mark:hover{
+  border: 2px solid black;
+  padding: 10px;
+  background-color: black;
+  color: rgb(226,70,43);
+}
+
