@@ -85,7 +85,7 @@ main {
   background-color: #e4e4e4;
 }
 
-.cards-container { 
+#cards-container { 
   display: flex;
   justify-content: center;
   align-items: center;
