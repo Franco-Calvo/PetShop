@@ -93,7 +93,13 @@
     position: relative;
     bottom: 75px;
     left: 0px;
-    box-shadow: 0.2rem 0.1rem 0rem 0.15rem rgb(255, 217, 49);
+    opacity: 0.96;
+}
+
+.section-2 .product img:hover {
+    height: 12.1rem;
+    box-shadow: 0.2rem 0.1rem 0rem 0.15rem rgb(70, 70, 70);
+    opacity: 1;
 }
 
 .section-3 {
