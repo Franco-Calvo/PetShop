@@ -10,7 +10,7 @@ main {
 
 
 .orange-b {
-  background-color: #e2462b;
+  background-color: #333333;
   height: 75vh;
   display: flex;
   align-items: center;
@@ -29,26 +29,58 @@ main {
 .card-J {
   background-color: #2b3035;
   width: 12rem;
-  min-height: 15rem;
+  min-height: 17rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 15px;
   gap: .5rem;
+  text-align: center;
+}
+
+.card-J button:hover {
+  background-color: #ffdd6f;
+  box-shadow: 0 0 20px #ffd16f50;
+}
+
+.card-J button:active {
+  background-color: #e09c43;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+}
+
+.card-J h4{
+  height: 2rem;
+}
+
+.card-J button { 
+  padding: .5px 5px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 
 .img-cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  position: relative;
   width: 100%;
-  background: white;
-  border-radius: 15px;
+  height: 0;
+  padding-bottom: 75%; /* establece la relación de aspecto de la imagen */
 }
 
 .img-cont img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .card-J h4 {
