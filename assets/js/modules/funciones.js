@@ -18,7 +18,9 @@ export function fillCard (obj) {
     <label>$${obj.precio}</label>
     <button id="count-add">+</button>
   </span>
+  <a href="../html/detalles.html">
   <button>Ver detalles</button>
+  </a>
 </div> `
 }
 

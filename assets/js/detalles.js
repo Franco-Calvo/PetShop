@@ -1,12 +1,12 @@
-const api = (`https://mindhub-xj03.onrender.com/api/amazing`)
+const api = (`https://mindhub-xj03.onrender.com/api/petshop`)
 fetch(api)
 .then(response => response.json())
 .then(data => {
-const eventosD = data
+const eventosD = data.map
 const queryString = location.search
 const params = new URLSearchParams(queryString)
 const id = params.get("id")
-const cardD = eventosD.find(objet => objet._id == id)
+const cardD = eventosD.find(obcjet => obcjet._id == id)
 const verTarjeta = document.getElementById("cardDescription")
 verTarjeta.innerHTML = 
 `<div class="card" style="width: 18rem">
