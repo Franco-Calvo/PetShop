@@ -60,7 +60,11 @@ export async function setupSearch(category) {
           obj.categoria === category
       );
 
-      newCard(filteredData, cardsPr);
+      if (filteredData.length === 0) {
+        cardsPr.innerHTML = "<p>No se encontraron resultados. Ajusta tu búsqueda.</p>";
+      } else {
+        newCard(filteredData, cardsPr);
+      }
     });
   } catch (error) {
     console.log(`The error is`, error);
