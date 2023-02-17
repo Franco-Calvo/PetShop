@@ -42,7 +42,6 @@ export async function fetchData(categoria) {
     console.log(`The error is`, error);
   }
 }
-
 export async function setupSearch(category) {
   try {
     let api = "https://mindhub-xj03.onrender.com/api/petshop";
