@@ -3,7 +3,7 @@ export function newCard(list, element) {
   let fill = "";
   for (let object of list) {
     fill += fillCard(object);
-    // console.log(object);
+    console.log(object);
   }
   element.innerHTML += fill;
 }
@@ -18,7 +18,7 @@ export function fillCard (obj) {
     <label>$${obj.precio}</label>
     <button id="count-add">+</button>
   </span>
-  <a href="../html/detalles.html">
+  <a href="../html/detalles.html?id=${obj._id}">
   <button>Ver detalles</button>
   </a>
 </div> `

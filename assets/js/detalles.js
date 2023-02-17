@@ -1,8 +1,8 @@
 const api = (`https://mindhub-xj03.onrender.com/api/petshop`)
 fetch(api)
 .then(response => response.json())
-.then(data => {
-const eventosD = data.map
+.then(object => {
+const eventosD = object
 const queryString = location.search
 const params = new URLSearchParams(queryString)
 const id = params.get("id")
