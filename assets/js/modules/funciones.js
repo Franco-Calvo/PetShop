@@ -22,19 +22,6 @@ export function fillCard (obj) {
 </div> `
 }
 
-export function addCategory (list, element) { 
-  let fragment = document.createDocumentFragment();
-  list.forEach((cate) => fragment.appendChild(createCategory(cate)));
-  element.appendChild(fragment)
-}
-
-export function createCategory (catego) {
-  console.log(catego);
-  let category = document.createElement(`div`);
-  category.className = "checks";
-  category.innerTML = `<input type="checkbox" name="checkbox" value="${catego}" class="checkbox">
-  <label>${catego.producto}</label>`
-}
 export async function fetchData(categoria) {
   try { 
 
