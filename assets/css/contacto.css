@@ -46,14 +46,15 @@
   gap: 0.5rem;
 }
 
-.submitbtn {
-  background-color: rgb(233, 171, 2);
+#submitbtn {
+  background-color: rgb(238, 188, 49);
   padding: 0.3rem;
   color: black;
   font-size: 1.2rem;
   border-radius: 15px;
+  border: 1px solid black;
 }
-.submitbtn:hover {
+#submitbtn:hover {
   background-color: rgb(226, 70, 43);
 }
 .textsubmit {
@@ -64,4 +65,11 @@
 }
 .textarea {
   resize: none;
+}
+#btnaceptar {
+  background-color: rgb(238, 188, 49);
+  border: 1px solid black;
+}
+#btnaceptar:hover {
+  background-color: rgb(226, 70, 43);
 }

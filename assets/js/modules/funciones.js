@@ -3,26 +3,33 @@ export function newCard(list, element) {
   let fill = "";
   for (let object of list) {
     fill += fillCard(object);
-    // console.log(object);
+
   }
   element.innerHTML += fill;
 }
 export function fillCard(obj) {
+  let unidades = obj.disponibles;
+  let message = "";
+  if (unidades >= 5) {
+    message = '<span class="tag">Últimas unidades</span>';
+  }
   return ` <div class="card-J">
+  
   <span class="img-cont">
     <img src="${obj.imagen}" alt="${obj.producto}">
   </span>
-
   <h4>${obj.producto}</h4>
+  ${message}
   <span>
     <label>$${obj.precio}</label>
     <button id="count-add">+</button>
   </span>
-  <a href="../html/detalles.html">
+  <a href="../html/detalles.html?id=${obj._id}">
   <button>Ver detalles</button>
   </a>
 </div> `;
 }
+
 export async function fetchData(categoria) {
   try {
     let api = "https://mindhub-xj03.onrender.com/api/petshop";
@@ -42,7 +49,6 @@ export async function fetchData(categoria) {
     console.log(`The error is`, error);
   }
 }
-
 export async function setupSearch(category) {
   try {
     let api = "https://mindhub-xj03.onrender.com/api/petshop";
@@ -61,7 +67,11 @@ export async function setupSearch(category) {
           obj.categoria === category
       );
 
-      newCard(filteredData, cardsPr);
+      if (filteredData.length === 0) {
+        cardsPr.innerHTML = "<p>No se encontraron resultados. Ajusta tu búsqueda.</p>";
+      } else {
+        newCard(filteredData, cardsPr);
+      }
     });
   } catch (error) {
     console.log(`The error is`, error);
