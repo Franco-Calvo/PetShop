@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header { 
+  height: 15vh;
+  background-color: rgb(226,70,43);
+  
+}
+
+main { 
+  min-height: 65vh;
+}
+
+footer { 
+  height: 20vh;
+}
+
+.orange-background {
+  background-color: rgb(226,70,43);
+  height: 40vh
+}
+
+
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+
+
+}
+
+.map-container{
+  border: 1px solid black;
+  height: 205px;
+}
+
+
+.contact-section{
+ 
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.social-media{
+  display: flex;
+  justify-content: space-between;
+
+
+  padding: 5px;
+  width: 240px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+height: 150px;
+
+}
+
+
+
+
+.mark{
+ 
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+
+}
+
+.mark:hover{
+  border: 2px solid black;
+  padding: 10px;
+  background-color: black;
+  color: rgb(226,70,43);
+
+}
+
+#instagram{
+  background-image: url(../images/pngegg.png);
+}
+
+#facebook{
+background-image: url(../images/facebook.png);
+}
+
+#whatsapp{
+  background-image: url(../images/pngegg\ \(2\).png);
+}
+
+
