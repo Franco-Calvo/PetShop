@@ -99,3 +99,37 @@
     left: 0px;
     box-shadow: 0.2rem 0.1rem 0rem 0.15rem rgb(255, 217, 49);
 }
+
+.section-3 {
+    /* background-color: rgb(255, 255, 255); */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 3rem;
+    gap: 1rem;
+    background-image: url(./assets\images\background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.text-container img {
+    height: 10rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.paw {
+    height: 10rem;
+    padding: 2rem;
+    width: 10rem;
+}
