@@ -1,6 +1,10 @@
-import {fetchData} from "./modules/funciones.js";
+import {fetchData, setupSearch} from "./modules/funciones.js";
 
 fetchData("jugueteria")
+
+setupSearch("jugueteria")
+
+
 // const button = document.getElementById("count-add")
 // // Cambia el estado del agregar al carrito a agregado
 

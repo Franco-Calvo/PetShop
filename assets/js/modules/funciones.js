@@ -3,7 +3,7 @@ export function newCard(list, element) {
   let fill = "";
   for (let object of list) {
     fill += fillCard(object);
-    console.log(object);
+    // console.log(object);
   }
   element.innerHTML += fill;
 }
@@ -18,7 +18,7 @@ export function fillCard(obj) {
     <label>$${obj.precio}</label>
     <button id="count-add">+</button>
   </span>
-  <a href="../html/detalles.html?id=${obj._id}">
+  <a href="../html/detalles.html">
   <button>Ver detalles</button>
   </a>
 </div> `;
@@ -30,7 +30,6 @@ export async function fetchData(categoria) {
     const data = await response.json();
 
     const cardsPr = document.querySelector("#cards-container");
-    const checkCategory = document.querySelector("#checks");
 
     const cardsCategories = data.map((object) => object);
     const categoryNoRepeat = [...new Set(cardsCategories)];
@@ -38,23 +37,33 @@ export async function fetchData(categoria) {
       (e) => e.categoria === categoria
     );
 
-    const inputSearch = document.querySelector("#inputSearch");
-
-   
-
     newCard(filterByCategory, cardsPr);
-    filterSearch(filterByCategory, cardsPr);
   } catch (error) {
     console.log(`The error is`, error);
   }
 }
 
-export function filterSearch (category, searchValue){
-  let categoryData = data.filter(obj => obj.categoria === category);
+export async function setupSearch(category) {
+  try {
+    let api = "https://mindhub-xj03.onrender.com/api/petshop";
+    const response = await fetch(api);
+    const data = await response.json();
 
-  let filteredData = categoryData.filter(obj => obj.producto.toLowerCase().includes(searchValue.toLowerCase()))
+    const cardsPr = document.querySelector("#cards-container");
+    
+    const inputSearch = document.querySelector("#inputSearch");
+    inputSearch.addEventListener("input", () => {
+      let searchValue = inputSearch.value.toLowerCase();
 
-  newCard(filteredData)
+      let filteredData = data.filter(
+        (obj) =>
+          obj.producto.toLowerCase().includes(searchValue) &&
+          obj.categoria === category
+      );
 
-
+      newCard(filteredData, cardsPr);
+    });
+  } catch (error) {
+    console.log(`The error is`, error);
+  }
 }
