@@ -121,6 +121,24 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    font-weight: 500;
+}
+.text-container p {
+    background-color: rgba(54, 54, 54, 0.416);
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+}
+.text-container h2{
+    background-color: rgb(54, 54, 54);
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    text-shadow: none;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 .text-container img {
     height: 10rem;
