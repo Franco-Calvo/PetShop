@@ -1,7 +1,7 @@
 .section-1 {
     padding: 0 0 0 2rem;
     background-color: rgb(226, 70, 43);
-    min-height: 65vh;
+    height: 65vh;
     display: flex;
 }
 
@@ -54,33 +54,29 @@
     gap: 1rem;
 }
 
-.section-1 img {
-    height: 30rem;
+.section-1 .dog-img {
+    height: 25rem;
     object-fit: cover;
     object-position: center;
+    opacity: 0.9;
 }
 
 .section-2 {
     background-color: rgb(54, 54, 54);
-    height: 8rem;
+    height: 20vh;
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: center;
 }
 
-.section-2 .cat-card {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.section-2 .cat-card img {
+.cat-card img {
     height: 15rem;
     object-fit: cover;
     align-self: start;
-    position: relative;
-    bottom: 178px;
-    left: 10px;
+    position: absolute;
+    bottom: 19.2vh;
+    left: 0px; 
 }
 
 .section-2 .product {
