@@ -1,16 +1,14 @@
-import {fetchData } from "./modules/funciones.js";
+import {fetchData} from "./modules/funciones.js";
 
 fetchData("jugueteria")
+// const button = document.getElementById("count-add")
+// // Cambia el estado del agregar al carrito a agregado
 
-const button = document.getElementById("count-add")
-
-// Cambia el estado del agregar al carrito a agregado
-
-button.addEventListener('click', function () {
-  if (button.innerHTML === "+"){
-    button.innerHTML = "✓";
-    button.style.color = "#4a7707"
-  } else { 
-    button.innerHTML = "+"
-  }
-})
+// button.addEventListener('click', function () {
+//   if (button.innerHTML === "+"){
+//     button.innerHTML = "✓";
+//     button.style.color = "#4a7707"
+//   } else { 
+//     button.innerHTML = "+"
+//   }
+// })
