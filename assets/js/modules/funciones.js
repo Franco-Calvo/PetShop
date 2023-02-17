@@ -10,7 +10,7 @@ export function newCard(list, element) {
 export function fillCard(obj) {
   let unidades = obj.disponibles;
   let message = "";
-  if (unidades >= 5) {
+  if (unidades <= 5) {
     message = '<span class="tag">Últimas unidades</span>';
   }
   return ` <div class="card-J">
@@ -22,6 +22,7 @@ export function fillCard(obj) {
   ${message}
   <span>
     <label>$${obj.precio}</label>
+    
     <button id="count-add">+</button>
   </span>
   <a href="../html/detalles.html?id=${obj._id}">
