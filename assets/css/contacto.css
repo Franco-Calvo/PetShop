@@ -25,10 +25,14 @@
   border: 2px solid black;
   margin: 3rem;
 }
-
+#divForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .form {
   display: flex;
-
+  flex-direction: column;
   justify-content: space-around;
   width: 35rem;
 }
@@ -62,14 +66,8 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 .textarea {
   resize: none;
-}
-#btnaceptar {
-  background-color: rgb(238, 188, 49);
-  border: 1px solid black;
-}
-#btnaceptar:hover {
-  background-color: rgb(226, 70, 43);
 }
