@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 header { 
@@ -16,6 +20,10 @@ main {
 
 footer { 
   height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #263238;
 }
 
 .orange-background {
@@ -23,79 +31,45 @@ footer {
   height: 40vh
 }
 
+.map-container iframe { 
+  border-radius: 1rem;
+  box-shadow: 10px 10px 14px -10px rgba(0,0,0,0.53);
+}
 
-
-footer{
+.container-general {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 250px;
-
-
+  width: 100%;
 }
 
-.map-container{
-  border: 1px solid black;
-  height: 205px;
-}
-
-
-.contact-section{
- 
-  height: 100px;
+.menu-container { 
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  gap: .6rem;
+  color: white;
 }
 
-
-.social-media{
-  display: flex;
-  justify-content: space-between;
-
-
-  padding: 5px;
-  width: 240px;
-}
-
-a{
+.menu-container a { 
   text-decoration: none;
   color: white;
-height: 150px;
+}
 
+.menu-container a:hover { 
+  color: rgb(255, 174, 0);
 }
 
 
-
-
-.mark{
- 
-  padding: 10px;
-  background-color: black;
-  border-radius: 5px;
-  color: white;
-
+.menu-container span { 
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: .5rem;
 }
 
-.mark:hover{
-  border: 2px solid black;
-  padding: 10px;
-  background-color: black;
-  color: rgb(226,70,43);
-
+.icon-C { 
+  color: rgb(255, 174, 0);
+  font-size: 1.1rem;
 }
-
-#instagram{
-  background-image: url(../images/pngegg.png);
-}
-
-#facebook{
-background-image: url(../images/facebook.png);
-}
-
-#whatsapp{
-  background-image: url(../images/pngegg\ \(2\).png);
-}
-
-

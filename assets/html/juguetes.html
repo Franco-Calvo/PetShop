@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="../css/juguetes.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav-size" data-bs-theme="dark">
@@ -24,7 +26,7 @@
         <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon "></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
@@ -63,25 +65,31 @@
       <div class="search-P">
 
         <div class="group">
-          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
           <input placeholder="Buscar..." type="search" class="inputSearch" id="inputSearch">
         </div>
 
-        </div>
+      </div>
 
-        <div class="category-container">
+      <div class="category-container">
 
-          <div id="checks">
-
-          </div>
+        <div id="checks">
 
         </div>
 
-        <div id="cards-container">
+      </div>
+
+      <div id="cards-container">
 
 
 
-        </div>
+      </div>
 
     </section>
 
@@ -105,25 +113,34 @@
 
   </main>
   <footer>
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419191.8731567697!2d-56.73820921755897!3d-34.83268882423916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses!2sco!4v1676488443658!5m2!1ses!2sco"
-        width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="contact-section">
-      <h5>Contactanos por nuestras redes sociales!</h5>
 
-      <div class="social-media">
-        <a href="#" id="instagram">Instagram</a>
-        <a href="#" id="facebook">Facebook</a>
-        <a href="#" id="whatsapp">Whatsapp</a>
+    <div class="container-general">
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2432183268593!2d-58.40568006829232!3d-34.59801080219745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca9158e82c41%3A0xafb5fe117a2c5a52!2sParaguay%202334%2C%20C1121ABL%20CABA!5e0!3m2!1ses!2sar!4v1676837824277!5m2!1ses!2sar"
+          width="250" height="160" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-    </div>
+      <div class="menu-container">
+        <h4>Menu</h4>
+        <a href="./index.html">Inicio</a>
+        <a href="./assets/html/contacto.html">Contacto</a>
+        <a href="./assets/html/farmacia.html">Farmacia</a>
+        <a href="./assets/html/juguetes.html">Juguetes</a>
+      </div>
 
-    <div class="mark">
-      <p>Sitio diseñado por el grupo #5 del cohort 42</p>
+      <div class="menu-container">
+        <h4>Contacto</h4>
+        <span><span class="icon-C"><i class="fa-sharp fa-solid fa-location-dot"></i></span>Paraguay 2334 5 F</span>
+        <span><span class="icon-C"><i class="fa-solid fa-envelope"></i></span><a
+            href="mailto:patitaspetshop@gmail.com">patitaspetshop@gmail.com</a></span>
+        <span><span class="icon-C"><i class="fa-brands fa-instagram"></i></span><a
+            href="https://www.instagram.com/patitaspetshop/">@PatitasPetShop</a></span>
+        <span><span class="icon-C"><i class="fa-brands fa-whatsapp"></i></span><a href="https://wa.link/7jvysx">+54
+            2912031234</a></span>
+      </div>
 
     </div>
   </footer>
