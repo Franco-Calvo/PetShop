@@ -92,58 +92,56 @@ main {
 
 /* footer */
 footer {
+  height: 20vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 250px;
-  border: 2px solid black;
+  background: #263238;
 }
 
-.map-container {
-  border: 2px solid black;
-  height: 205px;
+.orange-background {
+  background-color: rgb(226, 70, 43);
+  height: 40vh;
 }
 
-.contact-section {
-  height: 100px;
+.map-container iframe {
+  border-radius: 1rem;
+  box-shadow: 10px 10px 14px -10px rgba(0, 0, 0, 0.53);
+}
+
+.container-general {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  gap: 0.6rem;
+  color: white;
 }
 
-.social-media {
+.menu-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-container a:hover {
+  color: rgb(255, 174, 0);
+}
+
+.menu-container span {
   display: flex;
-  justify-content: space-between;
-
-  padding: 5px;
-  width: 240px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
 }
 
-footer a {
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 5px;
-}
-
-footer a:hover {
-  text-decoration: none;
-  color: rgb(226, 70, 43);
-  background-color: black;
-  padding: 5px;
-}
-
-.mark {
-  border: 2px solid black;
-  padding: 10px;
-  background-color: black;
-  color: white;
-}
-
-.mark:hover {
-  border: 2px solid black;
-  padding: 10px;
-  background-color: black;
-  color: rgb(226, 70, 43);
+.icon-C {
+  color: rgb(255, 174, 0);
+  font-size: 1.1rem;
 }

@@ -10,6 +10,7 @@
     border: none;
     margin: 10px;
     box-shadow:  5px 5px 10px rgb(30, 30, 30) ;
+    background-size: contain;
 
 }
 .description{
@@ -18,3 +19,17 @@
     justify-content: center;
     margin-top: 20px;
 }
+.mainDet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h5{
+    margin-top: 15px;
+}
+@media screen and (max-width: 991px) {
+    .description {
+        display: flex;
+        flex-wrap: wrap;
+    }
+  }

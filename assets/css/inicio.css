@@ -1,7 +1,7 @@
 .section-1 {
     padding: 0 0 0 2rem;
     background-color: rgb(226, 70, 43);
-    min-height: 65vh;
+    height: 65vh;
     display: flex;
 }
 
@@ -54,33 +54,52 @@
     gap: 1rem;
 }
 
-.section-1 img {
-    height: 30rem;
+@media screen and (max-height: 685px) {
+    .cat-card img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .section-3 img {
+        display: none;
+    }
+    .paw {
+        display: none;
+    }
+    .section-1{
+        flex-direction: column;
+    }
+    .dog-img{
+        display: none;
+    }
+}
+
+
+
+.section-1 .dog-img {
+    height: 25rem;
     object-fit: cover;
     object-position: center;
+    opacity: 0.9;
 }
 
 .section-2 {
     background-color: rgb(54, 54, 54);
-    height: 8rem;
+    height: 20vh;
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: center;
 }
 
-.section-2 .cat-card {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.section-2 .cat-card img {
+.cat-card img {
     height: 15rem;
     object-fit: cover;
     align-self: start;
-    position: relative;
-    bottom: 178px;
-    left: 10px;
+    position: absolute;
+    bottom: 19.2vh;
+    left: 0px; 
 }
 
 .section-2 .product {
@@ -97,7 +116,13 @@
     position: relative;
     bottom: 75px;
     left: 0px;
-    box-shadow: 0.2rem 0.1rem 0rem 0.15rem rgb(255, 217, 49);
+    opacity: 0.96;
+}
+
+.section-2 .product img:hover {
+    height: 12.1rem;
+    box-shadow: 0.2rem 0.1rem 0rem 0.15rem rgb(70, 70, 70);
+    opacity: 1;
 }
 
 .section-3 {
