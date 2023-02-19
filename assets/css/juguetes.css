@@ -162,7 +162,7 @@ main {
   border-radius: 8px;
   outline: none;
   background-color: #f3f3f4;
-  color: #000000;
+  color: #000000; 
   transition: 0.3s ease;
 }
 
