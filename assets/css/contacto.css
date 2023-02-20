@@ -76,3 +76,21 @@
 #btnaceptar:hover {
   background-color: rgb(226, 70, 43);
 }
+@media (min-width: 375px) and (max-width: 424px) {
+  .h3Form {
+    font-size: 0.8rem;
+    width: 22rem;
+  }
+  #divForm {
+    width: 21rem;
+  }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+  .h3Form {
+    font-size: 0.8rem;
+    width: 25rem;
+  }
+  #divForm {
+    width: 24rem;
+  }
+}
