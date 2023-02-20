@@ -5,17 +5,17 @@
 }
 
 main {
-  min-height: 150vh;
   background-color: #333333;
 }
 
 .orange-b {
   background-color: #333333;
-  height: 75vh;
+  padding: 2rem 0 3rem;
+  height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .titles {
@@ -136,6 +136,7 @@ main {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  height: fit-content;
 }
 
 .category-container {

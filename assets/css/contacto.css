@@ -15,7 +15,7 @@
   background-color: rgb(226, 70, 43);
   color: black;
   width: 35rem;
-  height: 40rem;
+  height: fit-content;
   text-align: center;
   display: flex;
   flex-direction: column;
