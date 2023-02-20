@@ -54,26 +54,6 @@
     gap: 1rem;
 }
 
-@media screen and (max-height: 685px) {
-    .cat-card img {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .section-3 img {
-        display: none;
-    }
-    .paw {
-        display: none;
-    }
-    .section-1{
-        flex-direction: column;
-    }
-    .dog-img{
-        display: none;
-    }
-}
 
 
 
@@ -99,7 +79,7 @@
     align-self: start;
     position: absolute;
     bottom: 19.2vh;
-    left: 0px; 
+    left: 0px;
 }
 
 .section-2 .product {
@@ -140,6 +120,7 @@
     background-repeat: no-repeat;
     min-height: 80vh;
 }
+
 .text-container {
     display: flex;
     align-items: center;
@@ -150,12 +131,14 @@
     text-shadow: black 0.1em 0.1em 0.2em;
     font-weight: 500;
 }
+
 .text-container p {
     background-color: rgba(54, 54, 54, 0.416);
     padding: 0.4rem;
     border-radius: 0.5rem;
 }
-.text-container h2{
+
+.text-container h2 {
     background-color: rgb(54, 54, 54);
     padding: 0.3rem;
     border-radius: 0.5rem;
@@ -165,6 +148,7 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+
 .text-container img {
     height: 10rem;
     object-fit: cover;
@@ -175,4 +159,98 @@
     height: 10rem;
     padding: 2rem;
     width: 10rem;
+}
+
+
+
+
+/* media queries */
+
+@media screen and (max-width: 500px) {
+    .buttons {
+        font-size: 0.8rem;
+    }
+
+    .shop-button {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .dog-img {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-2 {
+        height: fit-content;
+        padding: 1rem;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card-main {
+        width: 80vw;
+    }
+
+    .text-container {
+        width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .section-2 .product img {
+        height: 10rem;
+
+    }
+}
+
+@media screen and (max-height: 685px) {
+    .cat-card img {
+        display: none;
+        /* position: static; */
+    }
+}
+
+@media screen and (max-height: 585px) {
+    .section-2 {
+        height: fit-content;
+        padding: 1rem;
+    }
+
+    .section-2 .product img {
+        height: 8rem;
+        position: static;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .section-3 img {
+        display: none;
+    }
+
+    .paw {
+        display: none;
+    }
+
+    .section-1 {
+        flex-direction: column;
+    }
+
+    .dog-img {
+        position: static;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .section-1 {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .section-1 img {
+        justify-self: center;
+        transform: scaleX(-1);
+        margin: auto;
+    }
 }

@@ -96,6 +96,7 @@ footer h4 {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  padding: 0 0.5rem;
 }
 
 .menu-container {
@@ -131,7 +132,20 @@ footer h4 {
 
 /* media queries */
 
-@media screen and (min-width: 991px) {}
+@media screen and (max-width: 600px) {
+  footer .container-general{
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer .menu{
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 991px) {
   .nav-btn {
