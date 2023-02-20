@@ -30,7 +30,6 @@ export function fillCard(obj) {
   </a>
 </div> `;
 }
-
 export async function fetchData(categoria) {
   try {
     let api = "https://mindhub-xj03.onrender.com/api/petshop";
@@ -78,3 +77,18 @@ export async function setupSearch(category) {
     console.log(`The error is`, error);
   }
 }
+
+let cart = []
+
+export function addToCart(product) {
+  const existingProduct = cart.find((p) => p._id === product._id);
+
+  if (existingProduct) {
+    existingProduct.cantidad++;
+  } else {
+    cart.push({ ...product, cantidad: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+
