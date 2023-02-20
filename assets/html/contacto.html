@@ -22,10 +22,9 @@
           Ingresa tus datos y los de tu mascota para recibir las ofertas
           semanales y las novedades de nuestra tienda
         </h3>
-        <!-- <div class="form"> -->
 
-        <form class="form" action="">
-          <div id="divForm">
+        <div id="divForm">
+          <form class="form" action="">
             <div class="form1">
               <label for="name"><b> Nombre:</b></label>
               <label for="surname"><b> Apellido:</b></label>
@@ -39,9 +38,9 @@
               <input required type="text" id="name" name="name" />
               <input required type="text" id="surname" name="surname" />
               <input required type="email" name="email" id="email" />
-              <input required type="text" name="tel" id="tel" />
-              <input required type="text" id="petName" name="petName" />
-              <select required name="pet" id="petSelect">
+              <input type="text" name="tel" id="tel" />
+              <input type="text" id="petName" name="petName" />
+              <select name="pet" id="petSelect">
                 <option value="">-Indique tipo de mascota-</option>
                 <option value="dog">Perro</option>
                 <option value="cat">Gato</option>
@@ -49,10 +48,11 @@
                 <option value="parrot">Conejo</option>
                 <option value="spider">Araña</option>
                 <option value="fish">Pez</option>
-                <option value="other">Otro</option>
               </select>
             </div>
-          </div>
+          </form>
+        </div>
+        <div class="form">
           <div class="textsubmit">
             <label for="coment">Comentarios o sugerencias:</label>
 
@@ -63,6 +63,7 @@
               rows="5"
               cols="33"
             ></textarea>
+<<<<<<< HEAD
             <input id="submitbtn" class="submitbtn" type="submit" />
 =======
 </head>
@@ -180,8 +181,61 @@
 >>>>>>> ffdc368bd477e61f5c2b942ce25ff4c3359fc371
           </div>
         </form>
+=======
+            <!-- Button trigger modal -->
+            <button
+              id="submitbtn"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Enviar
+            </button>
+>>>>>>> parent of 344880b (contacto mensaje de alerta)
 
-        <!-- </div> -->
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Patitas PetShop
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Sus datos fueron recivibos con exito, ya formas parte de la
+                    familia Patitas PetShop! Estaremos en contacto para que no
+                    te pierdas nuestras novedades y le puedas brindar los
+                    mejores productos a tus mascotas.
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      id="btnaceptar"
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-dismiss="modal"
+                    >
+                      Aceptar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -218,7 +272,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/contacto.js"></script>
     <script src="../js/carrito.js"></script>
   </body>
 </html>
