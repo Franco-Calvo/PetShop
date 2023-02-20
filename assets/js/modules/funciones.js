@@ -16,18 +16,16 @@ export function fillCard(obj) {
   return ` <div class="card-J">
   
   <span class="img-cont">
-    <img src="${obj.imagen}" alt="${obj.producto}">
+    <a href="../html/detalles.html?id=${obj._id}" > <img src="${obj.imagen}" alt="${obj.producto}">  </a>
   </span>
   <h4>${obj.producto}</h4>
   ${message}
-  <span>
+  <span class="container-price">
     <label>$${obj.precio}</label>
-    
-    <button id="count-add">+</button>
+    <label>Cantidad: ${obj.disponibles}</label>
   </span>
-  <a href="../html/detalles.html?id=${obj._id}">
-  <button>Ver detalles</button>
-  </a>
+  
+  <button>Agregar al carrito</button>
 </div> `;
 }
 export async function fetchData(categoria) {

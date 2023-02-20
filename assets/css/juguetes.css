@@ -29,7 +29,7 @@ main {
 .card-J {
   background-color: rgb(226, 70, 43);
   width: 12rem;
-  min-height: 17rem;
+  min-height: 18rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -38,7 +38,6 @@ main {
   gap: 0.5rem;
   text-align: center;
 }
-
 .card-J button:hover {
   background-color: #ffdd6f;
   box-shadow: 0 0 20px #ffd16f50;
@@ -65,12 +64,23 @@ main {
   -webkit-transition: all 0.5s;
 }
 
+.container-price { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .img-cont {
   display: block;
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 75%; /* establece la relación de aspecto de la imagen */
+}
+
+.img-cont:hover { 
+  box-shadow: 0px 0px 10px #ffffff;
 }
 
 .img-cont img {
@@ -111,7 +121,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
+  
 }
 
 #count-add {
