@@ -11,7 +11,7 @@ const verTarjeta = document.getElementById("cardDescription")
 verTarjeta.innerHTML = 
 `<div class="card" style="max-width: 20rem;">
 <div class="card-descrip">
-  <h5 class=" mb-2 text-muted">${cardD.producto}</h5>
+  <h5 class="mb-2">${cardD.producto}</h5>
   <p class="card-text">Categoria: ${cardD.categoria}</p>
   <p class="card-text">Disponibles: ${cardD.disponibles}</p>
   <p class="card-text">${cardD.descripcion}</p>
