@@ -9,7 +9,7 @@ main {
 }
 
 .orange-b {
-  background-color: #333333;
+  background-color: rgb(226, 70, 43);
   padding: 3rem 0 3rem;
   height: fit-content;
   display: flex;
