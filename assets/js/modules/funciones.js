@@ -23,7 +23,7 @@ export function fillCard(obj) {
     <span>${obj.precio}</span>
     </span>
     <label>Cantidad: ${obj.disponibles}</label>
-  
+    <label class="id-c" style="display:none"> ${obj._id} </label>
   <button class="agregar-carrito">Agregar al carrito</button>
 </div> `;
 }
@@ -76,21 +76,8 @@ export async function setupSearch(category) {
   }
 }
 
-let cart = [];
 
-export function addToCart(product) {
-  const existingProduct = cart.find((p) => p._id === product._id);
-
-  if (existingProduct) {
-    existingProduct.cantidad++;
-  } else {
-    cart.push({ ...product, cantidad: 1 });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-const carrito = document.querySelector("#modal");
+const carrito = document.querySelector("#carrito");
 const contenedorCarrito = document.querySelector("#lista-carrito tbody");
 const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
 const listaCursos = document.querySelector("#cards-container");
@@ -123,12 +110,28 @@ function leerDatosCurso(curso) {
   const infoCurso = {
     imagen: curso.querySelector("img").src,
     titulo: curso.querySelector("h4").textContent,
+    _id: curso.querySelector(".id-c").textContent,
     precio: curso.querySelector(".container-price span").textContent,
     cantidad: 1,
   };
 
+  // Revisa si un elemento ya existe en el carrito
+  const existe = articulosCarrito.some((curso) => curso._id === infoCurso._id);
+  if (existe) {
+    // Actualizamos la cantidad
+    const cursos = articulosCarrito.map((curso) => {
+      if (curso._id === infoCurso._id) {
+        curso.cantidad++;
+        return curso;
+      } else {
+        return curso;
+      }
+    });
+    articulosCarrito = [...cursos];
+  } else {
+    articulosCarrito = [...articulosCarrito, infoCurso];
+  }
   // Agrega elementos al arreglo del carrito
-  articulosCarrito = [...articulosCarrito, infoCurso];
 
   console.log(articulosCarrito);
 
@@ -148,6 +151,11 @@ function carritoHTML() {
      </td> 
      <td>
       ${curso.titulo} 
+      ${curso.precio} 
+      ${curso.cantidad} 
+      <td> 
+        <a href="#" class="borrar-curso" data-id="${curso._id}"> X </a>
+      </td>
       </td> `;
 
     // Agrega el HTML del carrito en el tbody
