@@ -20,7 +20,7 @@ export function fillCard(obj) {
   <h4>${obj.producto}</h4>
   ${message}
   <span class="container-price">
-    <span>${obj.precio}</span>
+    <span class="text-white">Precio: $${obj.precio}</span>
     </span>
     <label>Cantidad: ${obj.disponibles}</label>
     <label class="id-c" style="display:none"> ${obj._id} </label>
