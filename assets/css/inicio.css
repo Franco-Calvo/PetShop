@@ -250,10 +250,12 @@
         height: fit-content;
     }
 
-    .section-1 img {
+    .section-1 .dog-img {
         justify-self: center;
         transform: scaleX(-1);
         margin: auto;
     }
+    .cat-card{
+        display: none;
+    }
 }
-
