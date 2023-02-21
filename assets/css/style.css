@@ -13,14 +13,73 @@
   top: 0;
   z-index: 1000;
   right: 0;
-  width: 300px;
+  width: fit-content;
+}
+
+.tbody-product {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img-card {
+  border-radius: 15%;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+}
+
+#vaciar-carrito { 
+  text-decoration: none;
+  background-color: #FFFF;
+  box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.03);
+  color: black;
+  font-size: 1rem;
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+#vaciar-carrito:hover {
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+
+}
+
+
+td{ 
+  padding: 5px;
+  
+}
+
+.row-modal {
+  width: 100%;
+  margin: 1px;
+}
+
+.borrar-curso { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  text-decoration: none;
+  border-radius: 50%;
+  color: rgb(255, 0, 0);
+  border: 1px;
+  padding: 5px;
 }
 
 /* caja modal */
 .modalContent {
   padding: 10px 20px;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.849);
+  background: rgba(61, 61, 61);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +105,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 
 .navbar {
   background-color: rgb(66, 63, 62) !important;
