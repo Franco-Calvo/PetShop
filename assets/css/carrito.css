@@ -1,4 +1,4 @@
-.carrito {
+/* #carrito {
   display: none;
   position: fixed;
   top: 0;
@@ -7,7 +7,6 @@
   width: 300px;
 }
 
-/* caja modal */
 .modalContent {
   padding: 10px 20px;
   height: 100vh;
@@ -22,5 +21,5 @@
   background-color: transparent;
   color: white;
   border: none;
-}
+} */
 
