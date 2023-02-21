@@ -6,7 +6,7 @@ const eventosD = object
 const queryString = location.search
 const params = new URLSearchParams(queryString)
 const id = params.get("id")
-const cardD = eventosD.find(obcjet => obcjet._id == id)
+const cardD = eventosD.find(object => object._id == id)
 const verTarjeta = document.getElementById("cardDescription")
 verTarjeta.innerHTML = 
 `<div class="card" style="max-width: 20rem;">

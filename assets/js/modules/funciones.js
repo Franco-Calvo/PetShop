@@ -15,7 +15,9 @@ export function fillCard(obj) {
   return ` <div class="card-J">
   
   <span class="img-cont">
-    <a href="../html/detalles.html?id=${obj._id}" > <img src="${obj.imagen}" alt="${obj.producto}">  </a>
+    <a href="../html/detalles.html?id=${obj._id}" > 
+    <img src="${obj.imagen}" alt="${obj.producto}">  
+    </a>
   </span>
   <h4>${obj.producto}</h4>
   ${message}
@@ -98,7 +100,6 @@ export function cargarEventListeners() {
   });
 }
 export function agregarCurso(e) {
-  e.preventDefault();
   if (e.target.classList.contains("agregar-carrito")) {
     const cursoSeleccionado = e.target.parentElement;
 
@@ -117,7 +118,6 @@ export function eliminarCurso(e) {
   }
 }
 export function leerDatosCurso(curso) {
-  console.log(curso);
 
   const infoCurso = {
     imagen: curso.querySelector("img").src,
@@ -142,7 +142,6 @@ export function leerDatosCurso(curso) {
     articulosCarrito = [...articulosCarrito, infoCurso];
   }
 
-  console.log(articulosCarrito);
 
   carritoHTML();
 }
@@ -175,4 +174,4 @@ export function limpiarHTML() {
   while (contenedorCarrito.firstChild) {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
-} 
+}
