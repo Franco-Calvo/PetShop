@@ -20,7 +20,7 @@ export function fillCard(obj) {
   <h4>${obj.producto}</h4>
   ${message}
   <span class="container-price">
-    <span>${obj.precio}</span>
+  <span class="text-white">Precio: $${obj.precio}</span>
     </span>
     <label>Cantidad: ${obj.disponibles}</label>
     <label class="id-c" style="display:none"> ${obj._id} </label>
@@ -87,6 +87,9 @@ cargarEventListeners();
 function cargarEventListeners() {
   // Cuando agregas un curso apretando agregar al carrito
   listaCursos.addEventListener("click", agregarCurso);
+  // Elimina cursos del carrito
+
+  carrito.addEventListener('click', eliminarCurso)
 }
 
 // Funciones
@@ -97,6 +100,20 @@ function agregarCurso(e) {
     const cursoSeleccionado = e.target.parentElement;
 
     leerDatosCurso(cursoSeleccionado);
+  }
+}
+
+// Elimina un curso del carrito 
+
+function eliminarCurso(e) {
+  if (e.target.classList.contains('borrar-curso')) {
+    const cursoID = e.target.getAttribute('data-id');
+
+    // Elimina del arreglo de articulosCarrito
+
+    articulosCarrito = articulosCarrito.filter(curso => curso._id !== cursoID)
+
+    carritoHTML()
   }
 }
 
