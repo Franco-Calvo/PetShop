@@ -159,9 +159,7 @@ export function carritoHTML() {
         <td class="text-white">${curso.titulo}</td>
         <td class="text-white">${curso.precio}</td>
         <td class="text-white">${curso.cantidad}</td> 
-        <td><a href="#" class="borrar-curso" data-id="${curso._id}"><span class="material-symbols-outlined">
-        close
-        </span></a></td>
+        <td><a href="#" class="borrar-curso" data-id="${curso._id}">x</a></td>
         </tbody>
      `;
 
