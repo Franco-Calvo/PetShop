@@ -76,7 +76,6 @@ export async function setupSearch(category) {
   }
 }
 
-
 const carrito = document.querySelector("#carrito");
 const contenedorCarrito = document.querySelector("#lista-carrito tbody");
 const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
@@ -84,29 +83,21 @@ const listaCursos = document.querySelector("#cards-container");
 let articulosCarrito = [];
 
 cargarEventListeners();
-function cargarEventListeners() {
-  // Verificar si hay datos en el local storage
-  document.addEventListener('DOMContentLoaded', () => {
-    articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+export function cargarEventListeners() {
+  document.addEventListener("DOMContentLoaded", () => {
+    articulosCarrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carritoHTML();
   });
 
-  // Cuando agregas un curso apretando agregar al carrito
   listaCursos.addEventListener("click", agregarCurso);
-  // Elimina cursos del carrito
-  carrito.addEventListener('click', eliminarCurso)
-
-  // Vaciar el carrito
-  vaciarCarritoBtn.addEventListener('click', () => {
-    articulosCarrito = []
-    limpiarHTML()
-  })
+  carrito.addEventListener("click", eliminarCurso);
+  vaciarCarritoBtn.addEventListener("click", () => {
+    articulosCarrito = [];
+    limpiarHTML();
+  });
 }
-
-
-// Funciones
-
-function agregarCurso(e) {
+export function agregarCurso(e) {
   e.preventDefault();
   if (e.target.classList.contains("agregar-carrito")) {
     const cursoSeleccionado = e.target.parentElement;
@@ -114,27 +105,19 @@ function agregarCurso(e) {
     leerDatosCurso(cursoSeleccionado);
   }
 }
+export function eliminarCurso(e) {
+  if (e.target.classList.contains("borrar-curso")) {
+    const cursoID = e.target.getAttribute("data-id");
 
-// Elimina un curso del carrito 
+    articulosCarrito = articulosCarrito.filter(
+      (curso) => curso._id !== cursoID
+    );
 
-function eliminarCurso(e) {
-  if (e.target.classList.contains('borrar-curso')) {
-    const cursoID = e.target.getAttribute('data-id');
-
-    // Elimina del arreglo de articulosCarrito
-
-    articulosCarrito = articulosCarrito.filter(curso => curso._id !== cursoID)
-
-    carritoHTML()
+    carritoHTML();
   }
 }
-
-// Lee el contenido del html al que le damos click y nos trae la info
-
-function leerDatosCurso(curso) {
+export function leerDatosCurso(curso) {
   console.log(curso);
-
-  // Crear un objeto con el contenido del curso actual
 
   const infoCurso = {
     imagen: curso.querySelector("img").src,
@@ -144,10 +127,8 @@ function leerDatosCurso(curso) {
     cantidad: 1,
   };
 
-  // Revisa si un elemento ya existe en el carrito
   const existe = articulosCarrito.some((curso) => curso._id === infoCurso._id);
   if (existe) {
-    // Actualizamos la cantidad
     const cursos = articulosCarrito.map((curso) => {
       if (curso._id === infoCurso._id) {
         curso.cantidad++;
@@ -160,50 +141,37 @@ function leerDatosCurso(curso) {
   } else {
     articulosCarrito = [...articulosCarrito, infoCurso];
   }
-  // Agrega elementos al arreglo del carrito
 
   console.log(articulosCarrito);
 
   carritoHTML();
 }
-
-// Muestra el carrito de compras en el HTML
-
-function carritoHTML() {
-  // Limpiar el carrito
+export function carritoHTML() {
   limpiarHTML();
 
-  // Actualizar el HTML del carrito
   articulosCarrito.forEach((curso) => {
     const row = document.createElement("tr");
-    row.innerHTML = ` 
+    row.classList.add("row-modal");
+    row.innerHTML = ` <tbody class="tbody-product">
     <td>
-      <img src="${curso.imagen}" width="80">
+      <img class="img-card" src="${curso.imagen}">
      </td> 
-     <td>
-      ${curso.titulo} 
-      ${curso.precio} 
-      ${curso.cantidad} 
-      <td> 
-        <a href="#" class="borrar-curso" data-id="${curso._id}"> X </a>
-      </td>
-      </td> `;
+      
+        <td class="text-white">${curso.titulo}</td>
+        <td class="text-white">${curso.precio}</td>
+        <td class="text-white">${curso.cantidad}</td> 
+        <td><a href="#" class="borrar-curso" data-id="${curso._id}"><span class="material-symbols-outlined">
+        close
+        </span></a></td>
+        </tbody>
+     `;
 
-    // Agrega el HTML del carrito en el tbody
     contenedorCarrito.appendChild(row);
   });
 
-  // Guardar los datos en el local storage
-  localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
+  localStorage.setItem("carrito", JSON.stringify(articulosCarrito));
 }
-
-
-//  ELimina los cursos del tbody
-
-function limpiarHTML() {
-  // Forma lenta
-  // contenedorCarrito.innerHTML = "";
-
+export function limpiarHTML() {
   while (contenedorCarrito.firstChild) {
     contenedorCarrito.removeChild(contenedorCarrito.firstChild);
   }
