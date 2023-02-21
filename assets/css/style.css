@@ -51,8 +51,10 @@
 
 }
 
+
 td{ 
   padding: 5px;
+  
 }
 
 .row-modal {
@@ -64,8 +66,8 @@ td{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   text-decoration: none;
   border-radius: 50%;
   color: rgb(255, 0, 0);
@@ -76,8 +78,8 @@ td{
 /* caja modal */
 .modalContent {
   padding: 10px 20px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.849);
+  height: 100vh;
+  background: rgba(61, 61, 61);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +105,6 @@ td{
   text-decoration: none;
   cursor: pointer;
 }
-
 
 .navbar {
   background-color: rgb(66, 63, 62) !important;
