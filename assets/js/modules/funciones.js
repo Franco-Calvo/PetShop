@@ -12,6 +12,10 @@ export function fillCard(obj) {
   if (unidades <= 5) {
     message = '<span class="tag">Últimas unidades</span>';
   }
+  let btnDisabled = "";
+  if (unidades === 0) {
+    btnDisabled = "disabled"
+  }
   return ` <div class="card-J">
   
   <span class="img-cont">
@@ -26,9 +30,12 @@ export function fillCard(obj) {
     </span>
     <label>Cantidad: ${obj.disponibles}</label>
     <label class="id-c" style="display:none"> ${obj._id} </label>
-  <button class="agregar-carrito">Agregar al carrito</button>
+  <button class="agregar-carrito" ${btnDisabled}>Agregar al carrito</button>
 </div> `;
+
+
 }
+
 export async function fetchData(categoria) {
   try {
     let api = "https://mindhub-xj03.onrender.com/api/petshop";
@@ -154,14 +161,15 @@ export function carritoHTML() {
     row.innerHTML = ` <tbody class="tbody-product">
     <td>
       <img class="img-card" src="${curso.imagen}">
-     </td> 
+    </td> 
       
         <td class="text-white">${curso.titulo}</td>
         <td class="text-white">${curso.precio}</td>
         <td class="text-white">${curso.cantidad}</td> 
         <td><a href="#" class="borrar-curso" data-id="${curso._id}">x</a></td>
         </tbody>
-     `;
+    `;
+
 
     contenedorCarrito.appendChild(row);
   });
