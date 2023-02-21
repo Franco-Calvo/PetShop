@@ -1,4 +1,3 @@
-
 const $submitBtn = document.getElementById("submitbtn");
 
 $submitBtn.addEventListener("click", function () {
