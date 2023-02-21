@@ -3,7 +3,6 @@ export function newCard(list, element) {
   let fill = "";
   for (let object of list) {
     fill += fillCard(object);
-
   }
   element.innerHTML += fill;
 }
@@ -21,11 +20,11 @@ export function fillCard(obj) {
   <h4>${obj.producto}</h4>
   ${message}
   <span class="container-price">
-    <label>$${obj.precio}</label>
+    <span>${obj.precio}</span>
+    </span>
     <label>Cantidad: ${obj.disponibles}</label>
-  </span>
   
-  <button>Agregar al carrito</button>
+  <button class="agregar-carrito">Agregar al carrito</button>
 </div> `;
 }
 export async function fetchData(categoria) {
@@ -54,7 +53,7 @@ export async function setupSearch(category) {
     const data = await response.json();
 
     const cardsPr = document.querySelector("#cards-container");
-    
+
     const inputSearch = document.querySelector("#inputSearch");
     inputSearch.addEventListener("input", () => {
       let searchValue = inputSearch.value.toLowerCase();
@@ -66,7 +65,8 @@ export async function setupSearch(category) {
       );
 
       if (filteredData.length === 0) {
-        cardsPr.innerHTML = "<p>No se encontraron resultados. Ajusta tu búsqueda.</p>";
+        cardsPr.innerHTML =
+          "<p>No se encontraron resultados. Ajusta tu búsqueda.</p>";
       } else {
         newCard(filteredData, cardsPr);
       }
@@ -76,7 +76,7 @@ export async function setupSearch(category) {
   }
 }
 
-let cart = []
+let cart = [];
 
 export function addToCart(product) {
   const existingProduct = cart.find((p) => p._id === product._id);
@@ -87,6 +87,82 @@ export function addToCart(product) {
     cart.push({ ...product, cantidad: 1 });
   }
 
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+const carrito = document.querySelector("#modal");
+const contenedorCarrito = document.querySelector("#lista-carrito tbody");
+const vaciarCarritoBtn = document.querySelector("#vaciar-carrito");
+const listaCursos = document.querySelector("#cards-container");
+let articulosCarrito = [];
+
+cargarEventListeners();
+function cargarEventListeners() {
+  // Cuando agregas un curso apretando agregar al carrito
+  listaCursos.addEventListener("click", agregarCurso);
+}
+
+// Funciones
+
+function agregarCurso(e) {
+  e.preventDefault();
+  if (e.target.classList.contains("agregar-carrito")) {
+    const cursoSeleccionado = e.target.parentElement;
+
+    leerDatosCurso(cursoSeleccionado);
+  }
+}
+
+// Lee el contenido del html al que le damos click y nos trae la info
+
+function leerDatosCurso(curso) {
+  console.log(curso);
+
+  // Crear un objeto con el contenido del curso actual
+
+  const infoCurso = {
+    imagen: curso.querySelector("img").src,
+    titulo: curso.querySelector("h4").textContent,
+    precio: curso.querySelector(".container-price span").textContent,
+    cantidad: 1,
+  };
+
+  // Agrega elementos al arreglo del carrito
+  articulosCarrito = [...articulosCarrito, infoCurso];
+
+  console.log(articulosCarrito);
+
+  carritoHTML();
+}
+
+// Muestra el carrito de compras en el HTML
+
+function carritoHTML() {
+  // Limpiar el carrito
+  limpiarHTML();
+  articulosCarrito.forEach((curso) => {
+    const row = document.createElement("tr");
+    row.innerHTML = ` 
+    <td>
+      <img src="${curso.imagen}" width="100">
+     </td> 
+     <td>
+      ${curso.titulo} 
+      </td> `;
+
+    // Agrega el HTML del carrito en el tbody
+
+    contenedorCarrito.appendChild(row);
+  });
+}
+
+//  ELimina los cursos del tbody
+
+function limpiarHTML() {
+  // Forma lenta
+  // contenedorCarrito.innerHTML = "";
+
+  while (contenedorCarrito.firstChild) {
+    contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+  }
+}

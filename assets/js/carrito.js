@@ -1,6 +1,6 @@
 
 
-let modal = document.getElementById("modal");
+let modal = document.getElementById("carrito");
 let boton = document.getElementById("openModal");
 let span = document.getElementById("close");
 

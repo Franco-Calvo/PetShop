@@ -17,7 +17,7 @@
 
 </head>
 
-<body> 
+<body>
   <header>
     <nav class="navbar navbar-expand-lg  bg-body-tertiary nav-size" data-bs-theme="dark">
       <div class="container nav-container">
@@ -32,16 +32,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
             <li class="nav-item px-2">
-              <a class="nav-link btn rounded-0 fs-6 nav-btn active-nav" href="../../index.html">Inicio</a>
+              <a class="nav-link btn rounded-0 fs-5 nav-btn active-nav" href="../../index.html">Inicio</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link btn  rounded-0 fs-6 nav-btn" href="../html/contacto.html">Contacto</a>
+              <a class="nav-link btn  rounded-0 fs-5 nav-btn" href="../html/contacto.html">Contacto</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link btn rounded-0 fs-6 nav-btn" href="#">Farmacia</a>
+              <a class="nav-link btn rounded-0 fs-5 nav-btn" href="#">Farmacia</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link btn rounded-0 fs-6 nav-btn" href="../html/juguetes.html">Juguetes</a>
+              <a class="nav-link btn rounded-0 fs-5 nav-btn" href="../html/juguetes.html">Juguetes</a>
             </li>
             <button id="openModal" class="px-2 nav-btn">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart cart"
@@ -93,11 +93,23 @@
     </section>
 
 
-    <div id="modal" class="modal-St">
+    <div id="carrito">
       <div class="modalContent">
         <span id="close" class="material-symbols-outlined">cancel</span>
-        <h2>Carrito de compra</h2>
-        <p>Aca irian los productos</p>
+        <table id="lista-carrito" class="u-full-width">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
       </div>
     </div>
 
